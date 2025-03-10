@@ -8,7 +8,6 @@
 ---------------------------------
 */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@100..900&family=Jersey+25&display=swap');
-/* Added 'Pixel' font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /*
@@ -16,17 +15,18 @@
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 */
+/* Custom Scrollbar */
 .body.section::-webkit-scrollbar-thumb {
   border-radius: 100px;
   background: #8070d4;
   border: 6px solid rgba(255, 0, 0, 0.2);
 }
 
-/* Improved Navigation Bar */
+/* Pixelated Navigation Bar */
 .horizontal-nav {
-  background: linear-gradient(90deg, #000000, #1a1a1a); /* Gradient background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
-  padding: 15px 0; /* Slightly more padding */
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 15px 0;
   margin-bottom: 20px;
   border-radius: 5px;
   display: flex;
@@ -38,32 +38,33 @@
   width: 100%;
   overflow: hidden;
   transition: all 0.3s ease;
-  margin-top: 20px;
-  margin: 20px 0% 20px 0%;
+  margin: 20px 0;
 }
 
 .horizontal-nav a {
   color: #ffffff;
   text-decoration: none;
-  padding: 20px 25px; /* Slightly more padding */
+  padding: 20px 25px;
   border-radius: 5px;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   transition: all 0.3s ease;
 }
 
 .horizontal-nav a:hover {
-  transform: scale(1.1); /* Scale effect on hover */
-  background: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 5px #ff7f00, 0 0 10px #ff7f00;
 }
 
-/* Sticky navigation effect */
 .horizontal-nav.sticky {
   padding: 10px 0;
-  background: rgba(0, 0, 0, 0.9); /* Semi-transparent background when sticky */
+  background: rgba(0, 0, 0, 0.9);
 }
 
-/*---------------------CONTENT--------------*/
-
-/* Enhanced Section Design */
+/* Pixelated Section Design */
 .download-section, .information-section, .creator-section, .support-section {
   display: flex;
   justify-content: center;
@@ -72,18 +73,31 @@
   width: 80%;
   height: 100%;
   border-radius: 40px;
-  background: linear-gradient(145deg, #1a1a1a, #000000); /* Gradient background */
-  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3); /* Modern shadow */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-  animation: appear linear;
+  background: linear-gradient(145deg, #1a1a1a, #000000);
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pixelate linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }
 
+@keyframes pixelate {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
 .download-section:hover, .information-section:hover, .creator-section:hover, .support-section:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
-  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.5);
 }
 
 .support-section {
@@ -96,13 +110,14 @@
   margin: 0 5% 5% 5%;
 }
 
-/* Improved Typography */
+/* Pixelated Typography */
 .download-section-text h1, .information-section-text h1, .creator-section-text h1, .support-section-text h1 {
-  font-family: "Press Start 2P", sans-serif; /* Retro font for headings */
-  background: linear-gradient(45deg, #ff2508, #ff7f00); /* Gradient text */
+  font-family: "Press Start 2P", sans-serif;
+  background: linear-gradient(45deg, #ff2508, #ff7f00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: 2px; /* Better spacing */
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 #000, 4px 4px 0 #ff7f00;
 }
 
 .download-section-text h2, .information-section-text h2 {
@@ -111,46 +126,45 @@
   font-style: normal;
 }
 
-/* Apply "Press Start 2P" font to all <p> elements */
 .download-section-text p, .information-section-text p, .creator-section-text p, .support-section-text p {
-  font-family: "Press Start 2P", sans-serif; /* Retro font for paragraphs */
+  font-family: "Press Start 2P", sans-serif;
   font-weight: 100;
   font-style: normal;
-  line-height: 1.8; /* Improved readability */
-  color: #e0e0e0; /* Slightly lighter text color */
+  line-height: 1.8;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 0 #000;
 }
 
-/* Modernized Buttons */
+/* Pixelated Buttons */
 .download-button-button {
-  background: linear-gradient(45deg, #e82b0e, #ff7f00); /* Gradient background */
-  border: none; /* Remove default border */
-  border-radius: 50px; /* More rounded corners */
-  box-shadow: 0 5px 15px rgba(232, 43, 14, 0.4); /* Subtle shadow */
+  background: linear-gradient(45deg, #e82b0e, #ff7f00);
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(232, 43, 14, 0.4);
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
-  font-size: 15px;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 13px 62px;
   text-decoration: none;
   text-shadow: 3px 2px 2px #7a2a1d;
   margin: 10px 0px 10px 40px;
-  transition: all 0.3s ease; /* Smooth transition */
+  transition: all 0.3s ease;
 }
 
 .download-button-button:hover {
-  background: linear-gradient(45deg, #ff7f00, #e82b0e); /* Reverse gradient on hover */
-  transform: scale(1.05); /* Slight scale effect */
-  box-shadow: 0 8px 20px rgba(232, 43, 14, 0.6); /* Enhanced shadow on hover */
+  background: linear-gradient(45deg, #ff7f00, #e82b0e);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(232, 43, 14, 0.6);
 }
 
 .download-button-button:active {
-  transform: scale(0.95); /* Pressed effect */
+  transform: scale(0.95);
 }
 
-/*--------------MEDIA QUERY-----------------*/
-
+/* Media Queries */
 @media only screen and (min-width: 200px) {
   /* Styles here */
 }
@@ -164,30 +178,29 @@
     padding: 10px 8px;
   }
   .download-section-text h1 {
-    font-size: 2.5rem; /* Adjusted for smaller screens */
+    font-size: 2rem;
   }
   .download-section-text p {
-    font-size: 0.8rem; /* Adjusted for smaller screens */
-    letter-spacing: 1px;
+    font-size: 0.8rem;
     line-height: 1.6;
   }
   .information-section-text h1 {
-    font-size: 2rem; /* Adjusted for smaller screens */
+    font-size: 1.8rem;
   }
   .information-section-text p {
-    font-size: 0.8rem; /* Adjusted for smaller screens */
+    font-size: 0.8rem;
   }
   .creator-section-text h1 {
-    font-size: 2rem; /* Adjusted for smaller screens */
+    font-size: 1.8rem;
   }
   .creator-section-text p {
-    font-size: 0.8rem; /* Adjusted for smaller screens */
+    font-size: 0.8rem;
   }
   .support-section-text h1 {
-    font-size: 2rem; /* Adjusted for smaller screens */
+    font-size: 1.8rem;
   }
   .support-section-text p {
-    font-size: 0.8rem; /* Adjusted for smaller screens */
+    font-size: 0.8rem;
   }
 }
 
@@ -200,29 +213,29 @@
     padding: 20px 20px;
   }
   .download-section-text h1 {
-    font-size: 3rem; /* Adjusted for medium screens */
+    font-size: 3rem;
   }
   .download-section-text p {
-    font-size: 1rem; /* Adjusted for medium screens */
+    font-size: 1rem;
     line-height: 1.8;
   }
   .information-section-text h1 {
-    font-size: 2.5rem; /* Adjusted for medium screens */
+    font-size: 2.5rem;
   }
   .information-section-text p {
-    font-size: 1rem; /* Adjusted for medium screens */
+    font-size: 1rem;
   }
   .creator-section-text h1 {
-    font-size: 2.5rem; /* Adjusted for medium screens */
+    font-size: 2.5rem;
   }
   .creator-section-text p {
-    font-size: 1rem; /* Adjusted for medium screens */
+    font-size: 1rem;
   }
   .support-section-text h1 {
-    font-size: 2.5rem; /* Adjusted for medium screens */
+    font-size: 2.5rem;
   }
   .support-section-text p {
-    font-size: 1rem; /* Adjusted for medium screens */
+    font-size: 1rem;
   }
 }
 
@@ -235,66 +248,34 @@
     padding: 45px 45px;
   }
   .download-section-text h1 {
-    font-size: 4rem; /* Adjusted for large screens */
+    font-size: 4rem;
   }
   .download-section-text p {
-    font-size: 1.2rem; /* Adjusted for large screens */
+    font-size: 1.2rem;
     line-height: 2;
   }
   .information-section-text h1 {
-    font-size: 3.5rem; /* Adjusted for large screens */
+    font-size: 3.5rem;
   }
   .information-section-text p {
-    font-size: 1.2rem; /* Adjusted for large screens */
+    font-size: 1.2rem;
   }
   .creator-section-text h1 {
-    font-size: 3.5rem; /* Adjusted for large screens */
+    font-size: 3.5rem;
   }
   .creator-section-text p {
-    font-size: 1.2rem; /* Adjusted for large screens */
+    font-size: 1.2rem;
   }
   .support-section-text h1 {
-    font-size: 3.5rem; /* Adjusted for large screens */
+    font-size: 3.5rem;
   }
   .support-section-text p {
-    font-size: 1.2rem; /* Adjusted for large screens */
+    font-size: 1.2rem;
   }
 }
 
 @media only screen and (min-width: 1600px) {
   /* Styles here */
-}
-
-/*
-animations-------------------------------
--------------------------------------------
-sample code:
-@keyframes show {
-from {
-  opacity: 0;
-  clip-path: inset(100% 100% 0 0);
-}
-to {
-  opacity: 1;
-  clip-path: inset(0 0 0 0);
-}
-}
-----------------------------------------------------
-usage:
-animation: show linear;
-animation-timeline: view();
-animation-range: entry 0% cover 40%;
-*/
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 /* Smooth Scroll */
@@ -314,7 +295,9 @@ html {
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(232, 43, 14, 0.4);
   transition: all 0.3s ease;
-  display: none; /* Hidden by default */
+  display: none;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 0.8rem;
 }
 
 .back-to-top:hover {
@@ -323,7 +306,7 @@ html {
 }
 
 .back-to-top.visible {
-  display: block; /* Show when user scrolls down */
+  display: block;
 }
 
 /* Loading Spinner */
