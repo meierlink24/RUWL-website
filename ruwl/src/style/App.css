@@ -1,0 +1,346 @@
+/*
+---------------------------------
++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++
+              FONTS
++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++
+---------------------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@100..900&family=Jersey+25&display=swap');
+/* Added 'Pixel' font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/*
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+*/
+.body.section::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #8070d4;
+  border: 6px solid rgba(255, 0, 0, 0.2);
+}
+
+/* Improved Navigation Bar */
+.horizontal-nav {
+  background: linear-gradient(90deg, #000000, #1a1a1a); /* Gradient background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+  padding: 15px 0; /* Slightly more padding */
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  margin: 20px 0% 20px 0%;
+}
+
+.horizontal-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 20px 25px; /* Slightly more padding */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.horizontal-nav a:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+  background: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+}
+
+/* Sticky navigation effect */
+.horizontal-nav.sticky {
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.9); /* Semi-transparent background when sticky */
+}
+
+/*---------------------CONTENT--------------*/
+
+/* Enhanced Section Design */
+.download-section, .information-section, .creator-section, .support-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 60px 0px 9.5%;
+  width: 80%;
+  height: 100%;
+  border-radius: 40px;
+  background: linear-gradient(145deg, #1a1a1a, #000000); /* Gradient background */
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3); /* Modern shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.download-section:hover, .information-section:hover, .creator-section:hover, .support-section:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.support-section {
+  margin-bottom: 200px;
+}
+
+.download-section-text, .information-section-text, .creator-section-text, .support-section-text {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 5% 5% 5%;
+}
+
+/* Improved Typography */
+.download-section-text h1, .information-section-text h1, .creator-section-text h1, .support-section-text h1 {
+  font-family: "Press Start 2P", sans-serif; /* Retro font for headings */
+  background: linear-gradient(45deg, #ff2508, #ff7f00); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px; /* Better spacing */
+}
+
+.download-section-text h2, .information-section-text h2 {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Apply "Press Start 2P" font to all <p> elements */
+.download-section-text p, .information-section-text p, .creator-section-text p, .support-section-text p {
+  font-family: "Press Start 2P", sans-serif; /* Retro font for paragraphs */
+  font-weight: 100;
+  font-style: normal;
+  line-height: 1.8; /* Improved readability */
+  color: #e0e0e0; /* Slightly lighter text color */
+}
+
+/* Modernized Buttons */
+.download-button-button {
+  background: linear-gradient(45deg, #e82b0e, #ff7f00); /* Gradient background */
+  border: none; /* Remove default border */
+  border-radius: 50px; /* More rounded corners */
+  box-shadow: 0 5px 15px rgba(232, 43, 14, 0.4); /* Subtle shadow */
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 13px 62px;
+  text-decoration: none;
+  text-shadow: 3px 2px 2px #7a2a1d;
+  margin: 10px 0px 10px 40px;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.download-button-button:hover {
+  background: linear-gradient(45deg, #ff7f00, #e82b0e); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slight scale effect */
+  box-shadow: 0 8px 20px rgba(232, 43, 14, 0.6); /* Enhanced shadow on hover */
+}
+
+.download-button-button:active {
+  transform: scale(0.95); /* Pressed effect */
+}
+
+/*--------------MEDIA QUERY-----------------*/
+
+@media only screen and (min-width: 200px) {
+  /* Styles here */
+}
+
+@media only screen and (min-width: 320px) {
+  .horizontal-nav {
+    font-size: 80%;
+    padding: 10px 0;
+  }
+  .horizontal-nav a {
+    padding: 10px 8px;
+  }
+  .download-section-text h1 {
+    font-size: 2.5rem; /* Adjusted for smaller screens */
+  }
+  .download-section-text p {
+    font-size: 0.8rem; /* Adjusted for smaller screens */
+    letter-spacing: 1px;
+    line-height: 1.6;
+  }
+  .information-section-text h1 {
+    font-size: 2rem; /* Adjusted for smaller screens */
+  }
+  .information-section-text p {
+    font-size: 0.8rem; /* Adjusted for smaller screens */
+  }
+  .creator-section-text h1 {
+    font-size: 2rem; /* Adjusted for smaller screens */
+  }
+  .creator-section-text p {
+    font-size: 0.8rem; /* Adjusted for smaller screens */
+  }
+  .support-section-text h1 {
+    font-size: 2rem; /* Adjusted for smaller screens */
+  }
+  .support-section-text p {
+    font-size: 0.8rem; /* Adjusted for smaller screens */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .horizontal-nav {
+    font-size: 120%;
+    padding: 10px 0;
+  }
+  .horizontal-nav a {
+    padding: 20px 20px;
+  }
+  .download-section-text h1 {
+    font-size: 3rem; /* Adjusted for medium screens */
+  }
+  .download-section-text p {
+    font-size: 1rem; /* Adjusted for medium screens */
+    line-height: 1.8;
+  }
+  .information-section-text h1 {
+    font-size: 2.5rem; /* Adjusted for medium screens */
+  }
+  .information-section-text p {
+    font-size: 1rem; /* Adjusted for medium screens */
+  }
+  .creator-section-text h1 {
+    font-size: 2.5rem; /* Adjusted for medium screens */
+  }
+  .creator-section-text p {
+    font-size: 1rem; /* Adjusted for medium screens */
+  }
+  .support-section-text h1 {
+    font-size: 2.5rem; /* Adjusted for medium screens */
+  }
+  .support-section-text p {
+    font-size: 1rem; /* Adjusted for medium screens */
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .horizontal-nav {
+    font-size: 200%;
+    padding: 40px 0;
+  }
+  .horizontal-nav a {
+    padding: 45px 45px;
+  }
+  .download-section-text h1 {
+    font-size: 4rem; /* Adjusted for large screens */
+  }
+  .download-section-text p {
+    font-size: 1.2rem; /* Adjusted for large screens */
+    line-height: 2;
+  }
+  .information-section-text h1 {
+    font-size: 3.5rem; /* Adjusted for large screens */
+  }
+  .information-section-text p {
+    font-size: 1.2rem; /* Adjusted for large screens */
+  }
+  .creator-section-text h1 {
+    font-size: 3.5rem; /* Adjusted for large screens */
+  }
+  .creator-section-text p {
+    font-size: 1.2rem; /* Adjusted for large screens */
+  }
+  .support-section-text h1 {
+    font-size: 3.5rem; /* Adjusted for large screens */
+  }
+  .support-section-text p {
+    font-size: 1.2rem; /* Adjusted for large screens */
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  /* Styles here */
+}
+
+/*
+animations-------------------------------
+-------------------------------------------
+sample code:
+@keyframes show {
+from {
+  opacity: 0;
+  clip-path: inset(100% 100% 0 0);
+}
+to {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+}
+}
+----------------------------------------------------
+usage:
+animation: show linear;
+animation-timeline: view();
+animation-range: entry 0% cover 40%;
+*/
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #e82b0e, #ff7f00);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(232, 43, 14, 0.4);
+  transition: all 0.3s ease;
+  display: none; /* Hidden by default */
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(232, 43, 14, 0.6);
+}
+
+.back-to-top.visible {
+  display: block; /* Show when user scrolls down */
+}
+
+/* Loading Spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #e82b0e;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
